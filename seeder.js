@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config/config.env' });
 
 // Load models 
-const Bootcampe = require('./models/Bootcamp');
+const Bootcamp = require('./models/Bootcamp');
 
 // Connnect to the DB
 mongoose.connect(process.env.MONGO_URI, {
@@ -19,7 +19,7 @@ const bootcamps = JSON.parse(fs.readFileSync(`${__dirname}/_data/bootcamps.json`
 // Import into DB
 const importData = async () => {
     try {
-        await Bootcampe.create(bootcamps);
+        await Bootcamp.create(bootcamps);
 
         console.log('Data Imported ... '.green.inverse);
         process.exit();
