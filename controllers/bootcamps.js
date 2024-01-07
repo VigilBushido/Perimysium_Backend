@@ -25,7 +25,8 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
         queryStr = queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g, match => `$${match}`);
         //console.log(queryStr);
         
-        query = Bootcamp.find(JSON.parse(queryStr));
+        //Finding resource
+        query = Bootcamp.find(JSON.parse(queryStr)).populate('courses');
         //console.log(query);
 
         // Select Fields
