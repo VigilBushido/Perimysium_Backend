@@ -90,7 +90,7 @@ exports.updateCourse = asyncHandler(async (req, res, next) => {
     });  
 });
 // @desc    Delete course
-// @route   PUT /api/v1/bootcamps/courses/:id
+// @route   DELETE /api/v1/bootcamps/courses/:id
 // @access  Private
 exports.deleteCourse = asyncHandler(async (req, res, next) => {
     let course = await Course.findById(req.params.id);
@@ -99,7 +99,7 @@ exports.deleteCourse = asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse(`No course with the id of ${req.params.id}`), 404);
     }
 
-    course.deleteOne();
+    await course.deleteOne();
     
     //send the response
     res.status(200).json({
