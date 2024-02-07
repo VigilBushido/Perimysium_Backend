@@ -3,7 +3,7 @@ const advancedResults = (model, populate) => async (req, res, next) => {
 
         const reqQuery = { ...req.query };
         // Fields to exclude
-        const removeFields = ['select', 'sort', 'page', 'limit'];  // we don't want to match it as an array
+        const removeFields = ['select', 'sort', 'page', 'limit'];  // I don't want to match it as an array
 
         // loop over removeFields and delete them from reqQuery
         removeFields.forEach(param => delete reqQuery[param]);
