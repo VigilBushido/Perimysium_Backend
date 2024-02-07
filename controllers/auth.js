@@ -16,10 +16,7 @@ exports.register = asyncHandler(async (req, res, next) => {
         role
     });
 
-    // Create token
-    const token = user.getSignedJWTToken();
-
-    res.status(200).json({ succeess: true, token });
+    sendTokenResponse(user, 200, res);
 });
 
 // @desc    Login User
@@ -47,7 +44,7 @@ exports.login = asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse('Invalid credentials', 401));
     }
 
-    sendTokenResponse();
+    sendTokenResponse(user, 200, res);
 });
 
 
