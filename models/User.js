@@ -25,7 +25,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add a password'],
         minlength: 6, 
-        select: false
+        select: false  // wont return the password 
     },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
