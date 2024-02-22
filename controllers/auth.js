@@ -70,6 +70,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     }
 
     // Get reset Token
+    const resetToken = user.getResetPasswordToken();
+    console.log(resetToken);
 
     res.status(200).json({
         success: true,
