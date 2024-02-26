@@ -1,7 +1,7 @@
 const ErrorResponse = require('../utils/errorResponse');
 
 const errorHandler = (err, req, res, next) => {
-    let error = { ...err }
+    let error = { ...err };
     error.message = err.message;
     // log to console for dev
     //console.log(err.stack.red);
@@ -28,7 +28,7 @@ const errorHandler = (err, req, res, next) => {
 
     //console.log(err.name);
     res.status(error.statusCode || 500).json({
-        success: false, 
+        success: false,
         error: error.message || 'Server Error'
     });
 };

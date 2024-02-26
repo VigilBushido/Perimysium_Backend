@@ -63,9 +63,9 @@ CourseSchema.statics.getAverageCost = async function (bootcampId) {
             averageCost: Math.ceil(obj[0].averageCost / 10) * 10  //so it comes back as an Integer
         });
     } catch (error) {
-        console.error(err)
+        console.error(err);
     }
-}
+};
 
 // Call getAverageCost after save
 CourseSchema.post('save', function () {
