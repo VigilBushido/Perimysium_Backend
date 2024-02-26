@@ -33,11 +33,11 @@ const importData = async () => {
     } catch {
         console.error(err);
     }
-}
+};
 
 // Delete Data
 const deleteData = async () => {
-    try{
+    try {
         await Bootcamp.deleteMany();
         await Course.deleteMany();
         await User.deleteMany();
@@ -47,9 +47,9 @@ const deleteData = async () => {
     } catch (err) {
         console.error(err);
     }
-}
+};
 
-if(process.argv[2] === '-i') {
+if (process.argv[2] === '-i') {
     importData();
 } else if (process.argv[2] === '-d') {
     deleteData();

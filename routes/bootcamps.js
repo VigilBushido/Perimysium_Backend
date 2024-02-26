@@ -1,5 +1,5 @@
 const express = require('express');
-const { getBootcamps, getBootcamp, createBootcamp , updateBootcamp , deleteBootcamp , getBootcampsInRadius , bootcampPhotoUpload } = require('../controllers/bootcamps');
+const { getBootcamps, getBootcamp, createBootcamp, updateBootcamp, deleteBootcamp, getBootcampsInRadius, bootcampPhotoUpload } = require('../controllers/bootcamps');
 
 const Bootcamp = require('../models/Bootcamp');
 const advancedResults = require('../middleware/advancedResults');
