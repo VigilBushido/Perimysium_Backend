@@ -16,7 +16,7 @@ const sendEmail = async (options) => {
     from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,// list of receivers
     to: options.email,
     subject: options.subject, // Subject line
-    text: options.subject, // plain text body
+    text: options.text, // plain text body
   };
 
   const info = await transporter.sendMail(message);
