@@ -3,3 +3,4 @@ config/config.env
 dev/
 _data
 /public
+biome.json
