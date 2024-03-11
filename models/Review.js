@@ -11,9 +11,9 @@ const ReviewSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add some text']
     },
-    weeks: {
-        type: String,
-        required: [true, 'Please add a number of weeks']
+    rating: {
+        type: Number,
+        required: [true, 'Please add a rating between 1 and 10']
     },
     createdAt: {
         type: Date,
@@ -31,4 +31,4 @@ const ReviewSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Course', CourseSchema);
+module.exports = mongoose.model('Review', ReviewSchema);
