@@ -62,9 +62,16 @@ ReviewSchema.post('save', function () {
     this.constructor.getAverageRating(this.bootcamp);
 });
 
-// Call getAverageRating on deletion
+/* // Call getAverageRating on deletion
 ReviewSchema.pre('remove', function () {
     this.constructor.getAverageRating(this.bootcamp);
+}); */
+
+// delete review & adjust the rating
+ReviewSchema.post('deleteOne', { document: true, query: false }, async function () {
+    console.log(`Review being removed from bootcamp ${this._id}`);
+    this.constructor.getAverageRating(this.bootcamp);
+    await this.model('Review').deleteMany({ bootcamp: this._id });
 });
 
 module.exports = mongoose.model('Review', ReviewSchema);

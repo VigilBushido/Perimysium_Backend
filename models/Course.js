@@ -72,7 +72,7 @@ CourseSchema.post('save', function () {
     this.constructor.getAverageCost(this.bootcamp);
 });
 
-// Call getAverageCost after save
+// Call getAverageCost on deletetion
 CourseSchema.pre('remove', function () {
     this.constructor.getAverageCost(this.bootcamp);
 });
