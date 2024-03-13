@@ -36,7 +36,7 @@ ReviewSchema.index({ bootcamp: 1, user: 1 }, { unique: true });
 
 // Static method to get avg of rating and save
 ReviewSchema.statics.getAverageRating = async function (bootcampId) {
-    //console.log('Calculating avg cost...'.blue);
+    //console.log('Calculating avg rating...'.blue);
     const obj = await this.aggregate([
         {
             $match: { bootcamp: bootcampId }
