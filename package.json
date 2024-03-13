@@ -16,13 +16,17 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-fileupload": "^1.4.3",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
     "morgan": "^1.10.0",
     "node-geocoder": "^4.2.0",
     "nodemailer": "^6.9.10",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "xss": "^1.0.15",
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
