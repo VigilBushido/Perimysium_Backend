@@ -60,12 +60,12 @@ const BootcampSchema = new mongoose.Schema({
         type: [String],
         required: true,
         enum: [
-            'Software Development',
-            'Web Development',
-            'Mobile Development',
-            'UI/UX',
-            'Data Science',
-            'Business',
+            'Strength Savage',
+            'Endurance Champion',
+            'World Champion',
+            'Goat Enthusiast',
+            'Long Board Surfer',
+            'Model',
             'Other'
         ]
     },
@@ -83,11 +83,11 @@ const BootcampSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    jobAssistance: {
+    coachingAssistance: {
         type: Boolean,
         default: false
     },
-    jobGuarantee: {
+    reservationAvailability: {
         type: Boolean,
         default: false
     },

@@ -1,6 +1,5 @@
 node_modules/
 config/config.env
 dev/
-_data
 /public
 biome.json
